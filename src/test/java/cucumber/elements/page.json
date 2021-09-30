@@ -1,0 +1,78 @@
+{
+  "pages": [
+    {
+      "pageInfo": {
+        "pageName": "giris",
+        "parentName": "",
+        "waitElement": "is ariyorum"
+      },
+      "elements": [
+        {
+          "elementName": "is ariyorum",
+          "IOSType": "xpath",
+          "IOSValue": "//XCUI",
+          "AndroidType": "id",
+          "AndroidValue":"com.isinolsun.app:id/bluecollar_type_button"
+        },
+        {
+          "elementName": "only this time",
+          "IOSType": "xpath",
+          "IOSValue": "//XCUI",
+          "AndroidType": "xpath",
+          "AndroidValue":"//*[@text='Only this time']"
+        },
+        {
+          "elementName": "input box",
+          "IOSType": "xpath",
+          "IOSValue": "//XCUI",
+          "AndroidType": "xpath",
+          "AndroidValue":"//*[@class='a4bIc']/input"
+        },
+        {
+          "elementName": "input box",
+          "IOSType": "xpath",
+          "IOSValue": "//XCUI",
+          "AndroidType": "xpath",
+          "AndroidValue":"//*[@class='a4bIc']/input"
+        }
+      ]
+    },
+    {
+      "pageInfo": {
+        "pageName": "home",
+        "parentName": "gry",
+        "waitElement": "input box"
+      },
+      "elements": [
+        {
+          "elementName": "input box",
+          "IOSType": "xpath",
+          "IOSValue": "//XCUI",
+          "AndroidType": "xpath",
+          "AndroidValue":"//*[@class='a4bIc']/input"
+        },
+        {
+          "elementName": "input box",
+          "IOSType": "xpath",
+          "IOSValue": "//XCUI",
+          "AndroidType": "xpath",
+          "AndroidValue":"//*[@class='a4bIc']/input"
+        },
+        {
+          "elementName": "input box",
+          "IOSType": "xpath",
+          "IOSValue": "//XCUI",
+          "AndroidType": "xpath",
+          "AndroidValue":"//*[@class='a4bIc']/input"
+        },
+        {
+          "elementName": "input box",
+          "IOSType": "xpath",
+          "IOSValue": "//XCUI",
+          "AndroidType": "xpath",
+          "AndroidValue":"//*[@class='a4bIc']/input"
+        }
+      ]
+    }
+  ]
+}

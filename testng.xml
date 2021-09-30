@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="IsinOlsun-Android-Test-Suite" parallel="tests" data-provider-thread-count="1" >
+
+    <test name="emulator-5554">
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="platformVersion" value="11"/>
+        <parameter name="ostype" value="Android"/>
+        <classes>
+            <class name="cucumber.tests.TestRunner"/>
+        </classes>
+    </test>
+</suite>
