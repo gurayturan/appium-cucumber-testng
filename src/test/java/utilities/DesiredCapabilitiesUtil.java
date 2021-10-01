@@ -3,6 +3,7 @@ package utilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class DesiredCapabilitiesUtil {
+
     public DesiredCapabilities getDesiredAndroidCapabilities(String udid, String platformVersion) {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("udid", udid);
@@ -14,6 +15,7 @@ public class DesiredCapabilitiesUtil {
       desiredCapabilities.setCapability("noReset", "false");
         return desiredCapabilities;
     }
+
     public DesiredCapabilities getDesiredIOSCapabilities(String udid, String platformVersion) {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("udid", udid);
