@@ -19,6 +19,15 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.opencv/opencv -->
+        <!-- https://mvnrepository.com/artifact/org.opencv/opencv -->
+
+        <dependency>
+            <groupId>org.openpnp</groupId>
+            <artifactId>opencv</artifactId>
+            <version>4.5.1-1</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
         <dependency>
             <groupId>io.appium</groupId>

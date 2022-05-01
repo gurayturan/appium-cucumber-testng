@@ -12,7 +12,7 @@ import java.net.URL;
 
 @CucumberOptions(
         monochrome = true,
-        tags = "@Candidate2 or @Candidate3 or @Candidate4",
+        tags = "@Candidate",
         plugin = {"pretty",
                 "html:target/cucumber-reports/cucumber.html",
                 "json:target/cucumber-reports/cucumber.json"

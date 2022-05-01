@@ -23,7 +23,7 @@ public class BaseTest {
         if(OSType.equals("Android"))
         {
             DesiredCapabilities caps=  desiredCapabilitiesUtil.getDesiredAndroidCapabilities(udid, platformVersion);
-            ThreadLocalDriver.setTLDriver(new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), caps));
+            ThreadLocalDriver.setTLDriver(new AndroidDriver<>(new URL("http://0.0.0.0:4723/wd/hub"), caps));
         }
         else{
             DesiredCapabilities caps=  desiredCapabilitiesUtil.getDesiredIOSCapabilities(udid, platformVersion);

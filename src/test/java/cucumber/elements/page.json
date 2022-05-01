@@ -11,7 +11,7 @@
           "elementName": "is ariyorum",
           "IOSType": "xpath",
           "IOSValue": "//XCUI",
-          "AndroidType": "id",
+          "AndroidType": "image",
           "AndroidValue":"com.isinolsun.app:id/bluecollar_type_button"
         },
         {
