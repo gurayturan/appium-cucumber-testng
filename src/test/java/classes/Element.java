@@ -9,11 +9,9 @@ public class Element {
     public Element() {
 
     }
-
     public ElementType getAndroidType() {
         return AndroidType;
     }
-
     public void setAndroidType(String type) {
         switch (type){
             case "id":
@@ -45,7 +43,6 @@ public class Element {
     public ElementType getIOSType() {
         return IOSType;
     }
-
     public void setIOSType(String type) {
         switch (type){
             case "id":
@@ -74,20 +71,15 @@ public class Element {
                 break;
         }
     }
-
-
     public String getAndroidValue() {
         return AndroidValue;
     }
-
     public void setAndroidValue(String androidValue) {
         AndroidValue = androidValue;
     }
-
     public String getIOSValue() {
         return IOSValue;
     }
-
     public void setIOSValue(String IOSValue) {
         this.IOSValue = IOSValue;
     }

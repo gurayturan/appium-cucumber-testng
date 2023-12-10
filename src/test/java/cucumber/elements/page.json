@@ -11,15 +11,15 @@
           "elementName": "is ariyorum",
           "IOSType": "xpath",
           "IOSValue": "//XCUI",
-          "AndroidType": "image",
+          "AndroidType": "id",
           "AndroidValue":"com.isinolsun.app:id/bluecollar_type_button"
         },
         {
           "elementName": "only this time",
           "IOSType": "xpath",
           "IOSValue": "//XCUI",
-          "AndroidType": "xpath",
-          "AndroidValue":"//*[@text='Only this time']"
+          "AndroidType": "id",
+          "AndroidValue":"com.android.permissioncontroller:id/permission_allow_one_time_button"
         },
         {
           "elementName": "input box",

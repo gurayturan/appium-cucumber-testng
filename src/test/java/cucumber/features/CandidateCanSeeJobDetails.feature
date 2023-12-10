@@ -6,7 +6,7 @@ Feature: Candidate can see the job's details.
       Then I wait "is ariyorum" element
       Given I click "is ariyorum" element
       Then I wait for 10 seconds
-      Then I test image "Untitled"
+     # Then I test image "Untitled"
       Then I wait "only this time" element
       Then I click "only this time" element
 

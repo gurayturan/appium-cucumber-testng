@@ -1,4 +1,4 @@
-package cucumber.tests;
+package classes;
 
 import classes.Parser;
 import io.appium.java_client.AppiumDriver;

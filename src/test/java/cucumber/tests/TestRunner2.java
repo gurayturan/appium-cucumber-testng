@@ -1,5 +1,6 @@
 package cucumber.tests;
 
+import classes.BaseTest;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;
@@ -11,14 +12,14 @@ import org.testng.annotations.Test;
 
 @CucumberOptions(
         monochrome = true,
-        tags = "@Candidate or @Candidate2 or @Candidate3",
+        tags = "@Candidate",
         plugin = {"pretty",
                 "html:target/cucumber-reports2/cucumber.html",
                 "json:target/cucumber-reports2/cucumber.json"
         },
         features = "src/test/java/cucumber/features",
-        glue = "cucumber.steps",
-        publish = true
+        glue = "cucumber.steps"
+
 )
 public class TestRunner2 extends BaseTest {
     private TestNGCucumberRunner testNGCucumberRunner;

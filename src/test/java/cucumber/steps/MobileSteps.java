@@ -1,37 +1,23 @@
 package cucumber.steps;
-import cucumber.tests.BaseTest;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.Setting;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.imagecomparison.FeatureDetector;
-import io.appium.java_client.imagecomparison.FeaturesMatchingOptions;
-import io.appium.java_client.imagecomparison.FeaturesMatchingResult;
-import io.appium.java_client.imagecomparison.MatchingFunction;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NotFoundException;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.PointerInput;
-import org.openqa.selenium.interactions.Sequence;
-import org.openqa.selenium.Point;
-import org.openqa.selenium.Rectangle;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
 import utilities.ThreadLocalDriver;
 import classes.Element;
 import classes.*;
 
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -39,8 +25,6 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.Duration;
-import java.util.Arrays;
 import java.util.Base64;
 
 import utilities.DesiredCapabilitiesUtil;
@@ -82,6 +66,7 @@ public class MobileSteps {
        {
            elementValue=elem.getAndroidValue();
            elemType=elem.getAndroidType();
+           System.out.println("\n--Driver OS:"+osType+"\n--Element Type:"+elemType+"\n--Element value:"+elementValue+"\n");
        }else{
            elementValue=elem.getIOSValue();
            elemType=elem.getIOSType();
@@ -137,7 +122,7 @@ public class MobileSteps {
         {
             mypage=parser.getPageAttributes(page);
 
-            if(mypage.getWaitElement().length()>0)
+            if(!mypage.getWaitElement().isEmpty())
             {
                 waitElement(mypage.getWaitElement());
             }
@@ -200,9 +185,7 @@ public class MobileSteps {
         driver.navigate().back();
     }
 
-    /*public List<WebElement> waitAndFindElements(By by) {
-        return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
-    }*/
+
 
     protected WebElement waitAndFindElement(By by) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
@@ -236,21 +219,6 @@ public class MobileSteps {
     private String getReferenceImageB64(String imageName) throws IOException {
         Path refImgPath = getImageFile(imageName).toPath();
         return Base64.getEncoder().encodeToString(Files.readAllBytes(refImgPath));
-    }
-
-    private void shootBird(AndroidDriver driver, WebElement birdEl, int xOffset, int yOffset) {
-        Rectangle rect = birdEl.getRect();
-        Point start = new Point(rect.x + rect.width / 2, rect.y + rect.height / 2);
-        Point end = start.moveBy(xOffset, yOffset);
-        Duration dragDuration = Duration.ofMillis(750);
-
-        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-        Sequence shoot = new Sequence(finger, 0);
-        shoot.addAction(finger.createPointerMove(Duration.ofMillis(0), PointerInput.Origin.viewport(), start.x, start.y));
-        shoot.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-        shoot.addAction(finger.createPointerMove(dragDuration, PointerInput.Origin.viewport(), end.x, end.y));
-        shoot.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
-        driver.perform(Arrays.asList(shoot));
     }
 
     private WebElement findImageWithOptimizationNotes(String imageName) throws Exception {
